@@ -1,0 +1,31 @@
+{
+  "name": "npm-continuous-auditter",
+  "version": "1.0.0",
+  "description": "👮 Continuously aduits the npm repository on the GitHub Actions.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "$npm_execpath build:ts && $npm_execpath build:bundle",
+    "build:ts": "tsc",
+    "build:bundle": "ncc build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loxygenK/npm-continuous-auditter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loxygenK/npm-continuous-auditter/issues"
+  },
+  "homepage": "https://github.com/loxygenK/npm-continuous-auditter#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "@vercel/ncc": "^0.33.0",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/exec": "^1.1.0"
+  }
+}
